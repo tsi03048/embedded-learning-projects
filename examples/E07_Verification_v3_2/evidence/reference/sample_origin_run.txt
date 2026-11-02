@@ -1,0 +1,9 @@
+request created: PASS
+completion succeeds: PASS
+no duplicate completion: PASS
+wrong label matches current: PASS
+wrong label hides origin: PASS
+preserved origin rejects old result: PASS
+same phase later still rejected: PASS
+new result accepted: PASS
+8/8 checks passed

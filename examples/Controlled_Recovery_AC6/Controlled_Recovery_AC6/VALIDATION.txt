@@ -1,0 +1,72 @@
+Validated 2026-11-01, Keil uVision / Arm Compiler6.22.
+Five targets compile/link/HEX:0 errors,0 warnings each. HEX checksums,
+SRAM SP alignment/range, Flash reset and strong TIM2 IRQ28/B0 vector+return checked.
+Source checks: direct main, no runtime polling while loop, supported error gate,
+one retry cap/no counter reset, preserve cause, ADON0 before ADC1 peripheral
+reset, configuration/stabilization/RSTCAL/CAL, discard calibrationDR, ready vs
+valid split, sample generation only on acceptedDR, no fresh data before syncTC,
+no DR writes inDRAIN, exact21data/9sync bytes. Fault variants only observation
+variables/hooks differ from their normal base. One main source per target.
+Separate Python controller/line model24 tests passed. Streams and parser results
+cover retry gate/cap, oldEOC during cleanup, reinit vs fresh sample, UART drain,
+SYNC failures/order, partial/no-boundary/complete old frames, chunk boundaries,
+bounded parser/range/grammar, frozen tick and deadline wrap/boundary.
+Model reset/calibration postconditions are policy inputs, NOT silicon emulation.
+Tests do NOT run ARM C, ADC reset/settling, NVIC, baud/electrical UART or PC adapter.
+Actual board recovery/fault masks/manual RAM request/latency/PC receipt remain
+unverified for user. Physical faults do not necessarily clear like test masks.
+UART cleanup is conservative drain+delimiter; no forced UART reset. Drain/sync
+failure stops with one attempt consumed. No general auto recovery, watchdog,
+DMA/IRQ transport, CRC, RX commands or unique generation across full MCU boots.
+[
+  {
+    "target": "01_ADC_Recovery",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000458",
+    "reset": "0x8000177",
+    "TIM2": "0x80001ed",
+    "handler_size": 42,
+    "return_instruction": "BX LR or POP PC"
+  },
+  {
+    "target": "02_UART_Recovery",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000460",
+    "reset": "0x800019b",
+    "TIM2": "0x8000211",
+    "handler_size": 42,
+    "return_instruction": "BX LR or POP PC"
+  },
+  {
+    "target": "03_ADC_First_Timeout",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000458",
+    "reset": "0x8000177",
+    "TIM2": "0x80001ed",
+    "handler_size": 42,
+    "return_instruction": "BX LR or POP PC"
+  },
+  {
+    "target": "04_UART_Partial_Retry",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000460",
+    "reset": "0x800019b",
+    "TIM2": "0x8000211",
+    "handler_size": 42,
+    "return_instruction": "BX LR or POP PC"
+  },
+  {
+    "target": "05_Drain_Refuses_Retry",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000468",
+    "reset": "0x800019b",
+    "TIM2": "0x8000211",
+    "handler_size": 42,
+    "return_instruction": "BX LR or POP PC"
+  }
+]

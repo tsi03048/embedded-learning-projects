@@ -1,0 +1,20 @@
+2026-11-01 / E06 PC collection v3.2
+Ten unchanged C sources copied from the existing exercise folders.
+Built with installed Visual Studio x64 C compiler using /nologo /W4 /WX /TC.
+All ten executables ran and returned exit code0. No compiler warnings/errors.
+E06-02 fresh_samples:12/12
+E06-04 watch:13/13
+E06-06 counter_wrap:8/8 (one check covers65,536 input/duration pairs)
+E06-08 counter_100:8/8 (one check covers10,000 input/duration pairs)
+E06-10 extended_counter:8/8
+E06-12 timer_read_race:5/5
+E06-15 review:13/13
+E06-17 step_identity:13/13
+E06-19 sample_origin:8/8
+E06-21 request_busy:10/10
+Total98 checks; the75,536 exhaustive combinations are inside two of those checks.
+These programs run the actual provided PC C source, with fictional values,
+timestamps and deterministic update order. They do NOT execute STM32 firmware
+or emulate ADC/TIM/NVIC/electrical/motor hardware. Existing ARM build records
+remain separate; no new AC6.22 build or real-board validation was performed.
+The source files and original individual ZIPs remain preserved.

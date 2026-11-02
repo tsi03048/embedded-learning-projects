@@ -1,0 +1,27 @@
+test_active_line_not_mixed (__main__.Tests.test_active_line_not_mixed) ... ok
+test_adc_error_prevents_same_pass_write (__main__.Tests.test_adc_error_prevents_same_pass_write) ... ok
+test_at_most_one_dr_submission_per_pass (__main__.Tests.test_at_most_one_dr_submission_per_pass) ... ok
+test_equal_indices_distinguished_by_count (__main__.Tests.test_equal_indices_distinguished_by_count) ... ok
+test_fifo_wrap (__main__.Tests.test_fifo_wrap) ... ok
+test_final_byte_not_confirmation (__main__.Tests.test_final_byte_not_confirmation) ... ok
+test_fixed_frame (__main__.Tests.test_fixed_frame) ... ok
+test_frozen_tick_no_time_progress (__main__.Tests.test_frozen_tick_no_time_progress) ... ok
+test_full_keeps_pending (__main__.Tests.test_full_keeps_pending) ... ok
+test_gap_is_not_false_txe_timeout (__main__.Tests.test_gap_is_not_false_txe_timeout) ... ok
+test_hysteresis (__main__.Tests.test_hysteresis) ... ok
+test_late_eoc_rejected (__main__.Tests.test_late_eoc_rejected) ... ok
+test_late_txe_rejected (__main__.Tests.test_late_txe_rejected) ... ok
+test_normal_no_drop (__main__.Tests.test_normal_no_drop) ... ok
+test_skipped_slots_not_invented (__main__.Tests.test_skipped_slots_not_invented) ... ok
+test_slow_still_acquires (__main__.Tests.test_slow_still_acquires) ... ok
+test_snapshot_is_not_live_raw (__main__.Tests.test_snapshot_is_not_live_raw) ... ok
+test_state_is_copied_with_raw (__main__.Tests.test_state_is_copied_with_raw) ... ok
+test_tc_timeout (__main__.Tests.test_tc_timeout) ... ok
+test_two_pending_plus_one_active (__main__.Tests.test_two_pending_plus_one_active) ... ok
+test_txe_timeout_freezes_both (__main__.Tests.test_txe_timeout_freezes_both) ... ok
+test_unsigned_wrap (__main__.Tests.test_unsigned_wrap) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.002s
+
+OK

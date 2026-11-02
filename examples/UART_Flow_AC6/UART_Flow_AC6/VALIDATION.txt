@@ -1,0 +1,48 @@
+Validated 2026-11-01, Keil uVision / Arm Compiler 6.22.
+Four targets: C compile, integrated assembly, link, HEX: 0 errors, 0 warnings.
+HEX checksums, SRAM SP alignment/range and Flash Thumb reset vector checked.
+Fourth target: Flash+0xD4 equals strong C USART1_IRQHandler. BX LR is present
+within that symbol's 118-byte code range. IRQ37 -> NVIC register1 bit5 checked.
+PC logical models: ASCII A LSB-first 8N1 frame; BRR mantissa/fraction and
+nominal baud error; CRH field preservation; DR shared address with separate
+RX/TX stores; overrun preserves old RDR, error policy discards that read;
+SR-then-DR clear sequence and TXE=1 while TC=0 distinction.
+These models do NOT emulate USART timing, serial waveforms or NVIC execution.
+Source scope: no user init/task wrappers, timer/SysTick, DMA, printf, parser,
+new-series ICR/RDR/TDR register access or SR blanket writes; IRQ only target4.
+Not validated: physical pins/adapter voltage, PC COM port/terminal, serial data,
+HSI accuracy, real RX errors/IRQ entry/return. User performs board tests later.
+[
+  {
+    "target": "01_TX_One",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000408",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "02_RX_Observe",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000410",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "03_Poll_Echo",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000410",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "04_RX_IRQ",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000410",
+    "reset": "0x8000177",
+    "USART1_vector": "0x080000d4",
+    "handler": "0x80001ed",
+    "handler_size": 118,
+    "return_instruction": "BX LR"
+  }
+]

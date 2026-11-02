@@ -1,0 +1,109 @@
+Validated 2026-11-01, Arm Compiler6.22, Keil uVision.
+Five targets compile/link/HEX: 0 errors,0 warnings each.
+HEX checksums, aligned SRAM SP and Flash Thumb reset vectors checked.
+TIM2 IRQ28 Flash+B0 equals strong C handler in every target.
+EXTI0 IRQ6 Flash+58 equals strong C handler in target04.
+Handler return instruction present within each linked symbol.
+Source checks: PSC799/ARR9, setupUG/UIF/UIE order, GPIO scope, gap restart,
+unsigned age20, EXTI PR write1, TIM2 SR write0 for update-only timer.
+Target05 equals target03 except header include and finalLED branch call.
+PC Python rule model: 11 unit tests previously executed and passed.
+Boundary19/20, contact changes, held button, confirmed release/repress,
+held-at-boot baseline, shortpulse, skipped observations, unsigned wrap,
+repeated same tick, unseen sub-tick pulse, blink boundary/late-main behavior.
+Injected trace confirmed press ticks29,120. This is NOT compiled ARM C,
+physical switch, timer/NVIC emulation or measured electrical behavior.
+Not validated: actual board wiring/sharing, HSI accuracy, real bounce,
+ISR entry/return/timing, LED, debugger behavior or software/hardware time loss.
+ms_tick counts serviced timer updates, not unconditional elapsed wall time.
+sample_gaps detects main gaps only while software ticks continue advancing.
+User will perform actual board validation later.
+[
+  {
+    "target": "01_Timed_LED",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000410",
+    "reset": "0x8000177",
+    "handlers": [
+      {
+        "name": "TIM2_IRQHandler",
+        "vector_offset": "0xb0",
+        "address": "0x80001ed",
+        "size": 42,
+        "return": "BX LR or POP PC"
+      }
+    ]
+  },
+  {
+    "target": "02_Stable_Follow",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000420",
+    "reset": "0x8000177",
+    "handlers": [
+      {
+        "name": "TIM2_IRQHandler",
+        "vector_offset": "0xb0",
+        "address": "0x80001ed",
+        "size": 42,
+        "return": "BX LR or POP PC"
+      }
+    ]
+  },
+  {
+    "target": "03_Press_Toggle",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000428",
+    "reset": "0x8000177",
+    "handlers": [
+      {
+        "name": "TIM2_IRQHandler",
+        "vector_offset": "0xb0",
+        "address": "0x80001ed",
+        "size": 42,
+        "return": "BX LR or POP PC"
+      }
+    ]
+  },
+  {
+    "target": "04_EXTI_Compare",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000428",
+    "reset": "0x80001a7",
+    "handlers": [
+      {
+        "name": "TIM2_IRQHandler",
+        "vector_offset": "0xb0",
+        "address": "0x800021d",
+        "size": 42,
+        "return": "BX LR or POP PC"
+      },
+      {
+        "name": "EXTI0_IRQHandler",
+        "vector_offset": "0x58",
+        "address": "0x8000179",
+        "size": 46,
+        "return": "BX LR or POP PC"
+      }
+    ]
+  },
+  {
+    "target": "05_Function_Compare",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000428",
+    "reset": "0x8000177",
+    "handlers": [
+      {
+        "name": "TIM2_IRQHandler",
+        "vector_offset": "0xb0",
+        "address": "0x80001ed",
+        "size": 42,
+        "return": "BX LR or POP PC"
+      }
+    ]
+  }
+]

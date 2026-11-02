@@ -1,0 +1,44 @@
+2026-11-01:4targets AC6.22 compile/link/HEX0errors0warnings each.
+HEXchecksums, SRAM stack range/alignment, ThumbFlashreset, TIM2 IRQ28 matching
+linker map and handlerreturn checked. Source gates/ownership verified: pending
+discard vs active abandonment, no DRwrite inDRAIN, syncTCbeforeADCreinit,
+ADON0beforeADC1RST/config/cal, ready vs fresh, generationcopiedfromsample through
+queue/active/wire, staleguard, no normal work during recovery. Demo variants
+differ only4initializers. One main C per target. Separate Python policy/line
+model27tests pass; success/discard/drainrefusal/recalrefusal and stream boundary
+cases checked. The model does NOT execute firmware or emulate peripherals.
+Actual board UART/ADC/reset/calibration/timing and observation masks unverified.
+[
+  {
+    "target": "01_Queue_Recovery",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x200004e8",
+    "reset": "0x800019b",
+    "TIM2_IRQ28": "0x8000211"
+  },
+  {
+    "target": "02_Partial_With_Queue",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x200004e8",
+    "reset": "0x800019b",
+    "TIM2_IRQ28": "0x8000211"
+  },
+  {
+    "target": "03_Drain_Refusal",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x200004e0",
+    "reset": "0x800019b",
+    "TIM2_IRQ28": "0x8000211"
+  },
+  {
+    "target": "04_Recal_Refusal",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x200004e0",
+    "reset": "0x800019b",
+    "TIM2_IRQ28": "0x8000211"
+  }
+]

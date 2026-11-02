@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Seoul",
+  "compiler": "Arm Compiler6.22",
+  "device": "STM32F103VET6 / high-density / LQFP100",
+  "clock": "HSI nominal8MHz",
+  "optimization": "-O0",
+  "targets": [
+    {
+      "target": "01_Reset_Flags",
+      "source": "App/01_reset_flags.c",
+      "source_sha256": "f7ede2c4c18eaecf224727ba34d12445e3a0eb1a447a6345574a01c00978984a",
+      "axf_sha256": "62abaa741abe37946a904742d737867352867162045b7c775e120af47242c3b1",
+      "build": "0 errors, 0 warnings",
+      "board": "not run"
+    },
+    {
+      "target": "02_PVD_Poll",
+      "source": "App/02_pvd_poll.c",
+      "source_sha256": "f7a852723e63751f3932bcd19ca7023a564fc9e90f08576d470ae6cf96b9822d",
+      "axf_sha256": "5d06d79ce3d281f5a51c10ff366b7b72539dfb769237b16296499f909cf7f745",
+      "build": "0 errors, 0 warnings",
+      "board": "not run"
+    }
+  ],
+  "pc_hardware_simulation": false,
+  "board_verified": false
+}

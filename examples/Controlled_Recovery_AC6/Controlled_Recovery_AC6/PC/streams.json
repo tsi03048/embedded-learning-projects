@@ -1,0 +1,23 @@
+{
+  "without_boundary": [
+    "D0,r",
+    "D1,raw=2600,state=W\r\n"
+  ],
+  "with_boundary": [
+    "D0,r",
+    "\r\n!SYNC\r\n",
+    "D1,raw=2600,state=W\r\n"
+  ],
+  "old_complete_then_new": [
+    "D0,raw=2600,state=W\r\n",
+    "\r\n!SYNC\r\n",
+    "D1,raw=2500,state=W\r\n"
+  ],
+  "split_chunks": [
+    "D",
+    "1,ra",
+    "w=0",
+    "000,state=N\r",
+    "\n"
+  ]
+}

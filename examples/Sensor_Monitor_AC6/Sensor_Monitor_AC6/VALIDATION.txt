@@ -1,0 +1,62 @@
+Validated 2026-11-01, Keil uVision / Arm Compiler6.22.
+Four targets compile/link/HEX: 0 errors,0 warnings each.
+HEX checksum, SRAM aligned SP, Flash Thumb reset vector checked.
+Targets03/04 TIM2 IRQ28 vector Flash+B0 equals strong C handler and has return.
+Source-order check: PA4 analog, ADC single channel4/239.5cycles/ADCCLK4MHz,
+ADON/settle/RSTCAL/CAL/discardDR before first measurement, DR read before valid,
+GPIO PB12 BSRR set/reset, timer PSC799/ARR9,100tick software slot accounting,
+USART1 BRR0x341/18ASCIIbytes/TXE then finalTC. One main source per target.
+Separate Python rule model12 tests executed and passed: exact thresholds,
+history band, startup policy, jittering values, zero/fullscale, mV divisor,
+software scheduling boundary/late/wrap, ASCII fields/length/nominal budget.
+PC trace18 rows and expected_uart.txt generated from injected input table.
+These models do NOT execute ARM C or emulate ADC/timer/NVIC/UART/electrical HW.
+Not validated: board connections/sharing/reference accuracy, ADC settling and
+error, LED behavior, real IRQ entry/return, timer cadence, latency, UART signal
+or terminal, all error recovery. User will perform actual board checks later.
+Normal-path ADC/UART waits have no timeout.100tick schedule is main initiated,
+not hardware TRGO. Serviced ms_tick and skipped_periods do not recover elapsed
+wall time when timer updates merge in UIF while IRQ is blocked/debugging.
+Before sample_valid1, LEDoff is startup state, not proof of normal input.
+[
+  {
+    "target": "01_Threshold_LED",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000420",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "02_Hysteresis_LED",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000420",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "03_Timed_Monitor",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000428",
+    "reset": "0x8000177",
+    "TIM2_handler": {
+      "offset": "0xB0",
+      "address": "0x80001ed",
+      "size": 42,
+      "return": "BX LR or POP PC"
+    }
+  },
+  {
+    "target": "04_UART_Report",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000430",
+    "reset": "0x800019b",
+    "TIM2_handler": {
+      "offset": "0xB0",
+      "address": "0x8000211",
+      "size": 42,
+      "return": "BX LR or POP PC"
+    }
+  }
+]

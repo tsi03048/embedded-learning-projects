@@ -1,0 +1,551 @@
+{
+  "normal": {
+    "samples": 9,
+    "admitted": 9,
+    "dropped": 0,
+    "confirmed": 9,
+    "pending": 0,
+    "active": null,
+    "peak": 1,
+    "confirmed_snapshots": [
+      [
+        1,
+        3000,
+        1
+      ],
+      [
+        2,
+        1500,
+        0
+      ],
+      [
+        3,
+        3000,
+        1
+      ],
+      [
+        4,
+        1500,
+        0
+      ],
+      [
+        5,
+        3000,
+        1
+      ],
+      [
+        6,
+        1500,
+        0
+      ],
+      [
+        7,
+        3000,
+        1
+      ],
+      [
+        8,
+        1500,
+        0
+      ],
+      [
+        9,
+        3000,
+        1
+      ]
+    ],
+    "trace": [
+      {
+        "tick": 101,
+        "samples": 1,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "SEND",
+        "active_id": 1,
+        "confirmed": 0
+      },
+      {
+        "tick": 122,
+        "samples": 1,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "TC",
+        "active_id": 1,
+        "confirmed": 0
+      },
+      {
+        "tick": 123,
+        "samples": 1,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "IDLE",
+        "active_id": null,
+        "confirmed": 1
+      },
+      {
+        "tick": 201,
+        "samples": 2,
+        "raw": 1500,
+        "alarm": 0,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "SEND",
+        "active_id": 2,
+        "confirmed": 1
+      },
+      {
+        "tick": 222,
+        "samples": 2,
+        "raw": 1500,
+        "alarm": 0,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "TC",
+        "active_id": 2,
+        "confirmed": 1
+      },
+      {
+        "tick": 223,
+        "samples": 2,
+        "raw": 1500,
+        "alarm": 0,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "IDLE",
+        "active_id": null,
+        "confirmed": 2
+      },
+      {
+        "tick": 301,
+        "samples": 3,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "SEND",
+        "active_id": 3,
+        "confirmed": 2
+      },
+      {
+        "tick": 322,
+        "samples": 3,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "TC",
+        "active_id": 3,
+        "confirmed": 2
+      },
+      {
+        "tick": 323,
+        "samples": 3,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "IDLE",
+        "active_id": null,
+        "confirmed": 3
+      },
+      {
+        "tick": 401,
+        "samples": 4,
+        "raw": 1500,
+        "alarm": 0,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "SEND",
+        "active_id": 4,
+        "confirmed": 3
+      },
+      {
+        "tick": 422,
+        "samples": 4,
+        "raw": 1500,
+        "alarm": 0,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "TC",
+        "active_id": 4,
+        "confirmed": 3
+      },
+      {
+        "tick": 423,
+        "samples": 4,
+        "raw": 1500,
+        "alarm": 0,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "IDLE",
+        "active_id": null,
+        "confirmed": 4
+      },
+      {
+        "tick": 501,
+        "samples": 5,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "SEND",
+        "active_id": 5,
+        "confirmed": 4
+      },
+      {
+        "tick": 522,
+        "samples": 5,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "TC",
+        "active_id": 5,
+        "confirmed": 4
+      },
+      {
+        "tick": 523,
+        "samples": 5,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "IDLE",
+        "active_id": null,
+        "confirmed": 5
+      },
+      {
+        "tick": 601,
+        "samples": 6,
+        "raw": 1500,
+        "alarm": 0,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "SEND",
+        "active_id": 6,
+        "confirmed": 5
+      },
+      {
+        "tick": 622,
+        "samples": 6,
+        "raw": 1500,
+        "alarm": 0,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "TC",
+        "active_id": 6,
+        "confirmed": 5
+      },
+      {
+        "tick": 623,
+        "samples": 6,
+        "raw": 1500,
+        "alarm": 0,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "IDLE",
+        "active_id": null,
+        "confirmed": 6
+      },
+      {
+        "tick": 701,
+        "samples": 7,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "SEND",
+        "active_id": 7,
+        "confirmed": 6
+      },
+      {
+        "tick": 722,
+        "samples": 7,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "TC",
+        "active_id": 7,
+        "confirmed": 6
+      },
+      {
+        "tick": 723,
+        "samples": 7,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "IDLE",
+        "active_id": null,
+        "confirmed": 7
+      },
+      {
+        "tick": 801,
+        "samples": 8,
+        "raw": 1500,
+        "alarm": 0,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "SEND",
+        "active_id": 8,
+        "confirmed": 7
+      },
+      {
+        "tick": 822,
+        "samples": 8,
+        "raw": 1500,
+        "alarm": 0,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "TC",
+        "active_id": 8,
+        "confirmed": 7
+      },
+      {
+        "tick": 823,
+        "samples": 8,
+        "raw": 1500,
+        "alarm": 0,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "IDLE",
+        "active_id": null,
+        "confirmed": 8
+      },
+      {
+        "tick": 901,
+        "samples": 9,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "SEND",
+        "active_id": 9,
+        "confirmed": 8
+      },
+      {
+        "tick": 922,
+        "samples": 9,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "TC",
+        "active_id": 9,
+        "confirmed": 8
+      },
+      {
+        "tick": 923,
+        "samples": 9,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "IDLE",
+        "active_id": null,
+        "confirmed": 9
+      }
+    ],
+    "submitted_bytes_ascii": "D0,raw=3000,state=W\r\nD0,raw=1500,state=N\r\nD0,raw=3000,state=W\r\nD0,raw=1500,state=N\r\nD0,raw=3000,state=W\r\nD0,raw=1500,state=N\r\nD0,raw=3000,state=W\r\nD0,raw=1500,state=N\r\nD0,raw=3000,state=W\r\n"
+  },
+  "slow20": {
+    "samples": 9,
+    "admitted": 4,
+    "dropped": 5,
+    "confirmed": 2,
+    "pending": 1,
+    "active": [
+      3,
+      3000,
+      1
+    ],
+    "peak": 2,
+    "confirmed_snapshots": [
+      [
+        1,
+        3000,
+        1
+      ],
+      [
+        2,
+        1500,
+        0
+      ]
+    ],
+    "trace": [
+      {
+        "tick": 101,
+        "samples": 1,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 0,
+        "dropped": 0,
+        "tx": "SEND",
+        "active_id": 1,
+        "confirmed": 0
+      },
+      {
+        "tick": 201,
+        "samples": 2,
+        "raw": 1500,
+        "alarm": 0,
+        "pending": 1,
+        "dropped": 0,
+        "tx": "SEND",
+        "active_id": 1,
+        "confirmed": 0
+      },
+      {
+        "tick": 301,
+        "samples": 3,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 2,
+        "dropped": 0,
+        "tx": "SEND",
+        "active_id": 1,
+        "confirmed": 0
+      },
+      {
+        "tick": 401,
+        "samples": 4,
+        "raw": 1500,
+        "alarm": 0,
+        "pending": 2,
+        "dropped": 1,
+        "tx": "SEND",
+        "active_id": 1,
+        "confirmed": 0
+      },
+      {
+        "tick": 501,
+        "samples": 5,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 2,
+        "dropped": 2,
+        "tx": "SEND",
+        "active_id": 1,
+        "confirmed": 0
+      },
+      {
+        "tick": 521,
+        "samples": 5,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 2,
+        "dropped": 2,
+        "tx": "TC",
+        "active_id": 1,
+        "confirmed": 0
+      },
+      {
+        "tick": 522,
+        "samples": 5,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 2,
+        "dropped": 2,
+        "tx": "IDLE",
+        "active_id": null,
+        "confirmed": 1
+      },
+      {
+        "tick": 523,
+        "samples": 5,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 1,
+        "dropped": 2,
+        "tx": "SEND",
+        "active_id": 2,
+        "confirmed": 1
+      },
+      {
+        "tick": 601,
+        "samples": 6,
+        "raw": 1500,
+        "alarm": 0,
+        "pending": 2,
+        "dropped": 2,
+        "tx": "SEND",
+        "active_id": 2,
+        "confirmed": 1
+      },
+      {
+        "tick": 701,
+        "samples": 7,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 2,
+        "dropped": 3,
+        "tx": "SEND",
+        "active_id": 2,
+        "confirmed": 1
+      },
+      {
+        "tick": 801,
+        "samples": 8,
+        "raw": 1500,
+        "alarm": 0,
+        "pending": 2,
+        "dropped": 4,
+        "tx": "SEND",
+        "active_id": 2,
+        "confirmed": 1
+      },
+      {
+        "tick": 901,
+        "samples": 9,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 2,
+        "dropped": 5,
+        "tx": "SEND",
+        "active_id": 2,
+        "confirmed": 1
+      },
+      {
+        "tick": 943,
+        "samples": 9,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 2,
+        "dropped": 5,
+        "tx": "TC",
+        "active_id": 2,
+        "confirmed": 1
+      },
+      {
+        "tick": 944,
+        "samples": 9,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 2,
+        "dropped": 5,
+        "tx": "IDLE",
+        "active_id": null,
+        "confirmed": 2
+      },
+      {
+        "tick": 945,
+        "samples": 9,
+        "raw": 3000,
+        "alarm": 1,
+        "pending": 1,
+        "dropped": 5,
+        "tx": "SEND",
+        "active_id": 3,
+        "confirmed": 2
+      }
+    ],
+    "submitted_bytes_ascii": "D0,raw=3000,state=W\r\nD0,raw=1500,state=N\r\nD0"
+  }
+}

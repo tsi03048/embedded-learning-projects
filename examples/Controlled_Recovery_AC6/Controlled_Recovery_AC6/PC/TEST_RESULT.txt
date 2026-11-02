@@ -1,0 +1,31 @@
+test_arbitrary_chunk_sizes (__main__.RecoveryTests.test_arbitrary_chunk_sizes) ... ok
+test_boot_fault_is_not_supported (__main__.RecoveryTests.test_boot_fault_is_not_supported) ... ok
+test_boundary_allows_fresh_line (__main__.RecoveryTests.test_boundary_allows_fresh_line) ... ok
+test_calibration_fails_after_retry (__main__.RecoveryTests.test_calibration_fails_after_retry) ... ok
+test_complete_old_line_cannot_be_retracted (__main__.RecoveryTests.test_complete_old_line_cannot_be_retracted) ... ok
+test_drain_failure_refuses_sync_and_reinit (__main__.RecoveryTests.test_drain_failure_refuses_sync_and_reinit) ... ok
+test_drain_makes_no_new_byte_submissions (__main__.RecoveryTests.test_drain_makes_no_new_byte_submissions) ... ok
+test_drain_ready_at_boundary_and_wrap (__main__.RecoveryTests.test_drain_ready_at_boundary_and_wrap) ... ok
+test_eoc_during_cleanup_is_not_published (__main__.RecoveryTests.test_eoc_during_cleanup_is_not_published) ... ok
+test_fresh_result_requires_new_start (__main__.RecoveryTests.test_fresh_result_requires_new_start) ... ok
+test_frozen_tick_during_drain (__main__.RecoveryTests.test_frozen_tick_during_drain) ... ok
+test_no_automatic_retry (__main__.RecoveryTests.test_no_automatic_retry) ... ok
+test_only_one_retry_per_boot (__main__.RecoveryTests.test_only_one_retry_per_boot) ... ok
+test_overlong_line_then_new_line (__main__.RecoveryTests.test_overlong_line_then_new_line) ... ok
+test_partial_without_boundary_is_rejected (__main__.RecoveryTests.test_partial_without_boundary_is_rejected) ... ok
+test_preserve_original_error (__main__.RecoveryTests.test_preserve_original_error) ... ok
+test_raw_range_and_grammar (__main__.RecoveryTests.test_raw_range_and_grammar) ... ok
+test_reinit_is_not_a_fresh_sample (__main__.RecoveryTests.test_reinit_is_not_a_fresh_sample) ... ok
+test_request_during_active_work_is_denied (__main__.RecoveryTests.test_request_during_active_work_is_denied) ... ok
+test_reset_only_after_sync_tc (__main__.RecoveryTests.test_reset_only_after_sync_tc) ... ok
+test_sync_bytes_exact_and_no_data_yet (__main__.RecoveryTests.test_sync_bytes_exact_and_no_data_yet) ... ok
+test_sync_is_control_not_measurement (__main__.RecoveryTests.test_sync_is_control_not_measurement) ... ok
+test_sync_tc_failure (__main__.RecoveryTests.test_sync_tc_failure) ... ok
+test_sync_txe_failure (__main__.RecoveryTests.test_sync_txe_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.001s
+
+OK
+{"without_boundary": {"records": [], "syncs": 0, "rejected": 1, "unfinished": ""}, "with_boundary": {"records": [{"generation": 1, "raw": 2600, "state": "W"}], "syncs": 1, "rejected": 1, "unfinished": ""}, "old_complete_then_new": {"records": [{"generation": 0, "raw": 2600, "state": "W"}, {"generation": 1, "raw": 2500, "state": "W"}], "syncs": 1, "rejected": 0, "unfinished": ""}, "split_chunks": {"records": [{"generation": 1, "raw": 0, "state": "N"}], "syncs": 0, "rejected": 0, "unfinished": ""}}
+Saved injected policy trace and byte parser results. NOT real UART/ARM execution.

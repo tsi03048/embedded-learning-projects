@@ -1,0 +1,66 @@
+Validated 2026-11-01, Keil uVision / Arm Compiler6.22.
+Four targets compile/link/HEX with 0 errors,0 warnings.
+HEX checksums, aligned SRAM SP, Flash Thumb reset vector checked.
+IRQ31/32 Flash+BC/C0 equal strong C I2C1_EV/ER handlers; return instruction
+present within each handler symbol. IRQ/NVIC register/bit arithmetic checked.
+PC models: 7-bit vs bus address bytes, MSB bits, wired open-drain resolution,
+80kHz/CCR50/FREQ8/TRISE9, startup tPUP margin, illustrative RC rise time,
+CRL field preservation + SCL GPIO hold/restore, SB and ADDR side-effect
+sequences, separate ACK/NACK probe results, final NACK vs address AF,
+random-read pointer/repeated START/36 clocks, valid-zero representation.
+Source-order check: PE0 before timings; receive ACK0 -> SCL GPIO OD low ->
+SR1/SR2 -> STOP request -> AF OD restore -> RxNE/read -> bus end -> result.
+Source scope: no timer/SysTick/DMA, no user init/task helper, no memory
+data programming. Main has no DR access in the IRQ probe target.
+These models do NOT emulate electrical I2C, EEPROM, filter or NVIC behavior.
+Not validated: actual module model/pins/pull-ups/voltage/rise time, startup,
+ACK/NACK waveforms, address-only STOP, EV6_3 SCL workaround, random read,
+real IRQ entry/return and all errata recovery. User will test actual board.
+Normal-path waits have no timeout/recovery. AT24C02D read is conditional on
+confirmed model, address000, stable power and successful address probe.
+[
+  {
+    "target": "01_Idle_Lines",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000410",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "02_Address_Poll",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000418",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "03_Read_One",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000418",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "04_Address_IRQ",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000418",
+    "reset": "0x800028b",
+    "handlers": [
+      {
+        "name": "I2C1_EV_IRQHandler",
+        "vector": "0x80000bc",
+        "address": "0x80001f5",
+        "size": 150,
+        "return_instruction": "BX LR or POP PC"
+      },
+      {
+        "name": "I2C1_ER_IRQHandler",
+        "vector": "0x80000c0",
+        "address": "0x8000179",
+        "size": 122,
+        "return_instruction": "BX LR or POP PC"
+      }
+    ]
+  }
+]

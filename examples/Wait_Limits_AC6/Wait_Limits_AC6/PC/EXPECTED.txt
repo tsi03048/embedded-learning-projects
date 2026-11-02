@@ -1,0 +1,5 @@
+normal: error=0, raw=2600, valid=1, DR submitted=18, finalTC confirmations=1, prefix=b'raw=2600,state=W\r\n'
+adc_missing: error=3, raw=65535, valid=0, DR submitted=0, finalTC confirmations=0, prefix=b''
+txe_after4: error=4, raw=2600, valid=1, DR submitted=4, finalTC confirmations=0, prefix=b'raw='
+tc_missing: error=5, raw=2600, valid=1, DR submitted=18, finalTC confirmations=0, prefix=b'raw=2600,state=W\r\n'
+Injected status observations, NOT physical waveforms or ARM execution.

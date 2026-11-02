@@ -1,0 +1,15 @@
+2026-11-01 v3.2 addition. New target rebuilt; original 01..05 sources preserved.
+Logical expectation model and HEX checks only; no MCU peripheral simulation or real PA2 test.
+{
+  "new_target": "06_Controlled_Preload",
+  "compiler": "Arm Compiler6.22",
+  "errors": 0,
+  "warnings": 0,
+  "original_5_sources_unchanged": true,
+  "one_main_per_target": true,
+  "HEX_checks_passed": true,
+  "expected_current_high_ticks": 750,
+  "expected_next_high_ticks": 250,
+  "logical_model_only": true,
+  "board_verified": false
+}

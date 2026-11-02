@@ -1,0 +1,49 @@
+{
+  "without_boundary": {
+    "records": [],
+    "syncs": 0,
+    "rejected": 1,
+    "unfinished": ""
+  },
+  "with_boundary": {
+    "records": [
+      {
+        "generation": 1,
+        "raw": 2600,
+        "state": "W"
+      }
+    ],
+    "syncs": 1,
+    "rejected": 1,
+    "unfinished": ""
+  },
+  "old_complete_then_new": {
+    "records": [
+      {
+        "generation": 0,
+        "raw": 2600,
+        "state": "W"
+      },
+      {
+        "generation": 1,
+        "raw": 2500,
+        "state": "W"
+      }
+    ],
+    "syncs": 1,
+    "rejected": 0,
+    "unfinished": ""
+  },
+  "split_chunks": {
+    "records": [
+      {
+        "generation": 1,
+        "raw": 0,
+        "state": "N"
+      }
+    ],
+    "syncs": 0,
+    "rejected": 0,
+    "unfinished": ""
+  }
+}

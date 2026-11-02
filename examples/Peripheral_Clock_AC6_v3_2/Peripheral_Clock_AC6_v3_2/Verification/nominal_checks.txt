@@ -1,0 +1,5 @@
+PC arithmetic only, not MCU emulation:
+APB1 /1: HCLK8MHz/PCLK1=8MHz/TIM2=8MHz/CNT=1000Hz/wrap10s
+APB1 /4: HCLK8MHz/PCLK1=2MHz/TIM2=4MHz/CNT=500Hz/wrap20s
+State and source inspection: target02 gate-off and reset-held branches do not access TIM2.
+No physical-board test, frequency measurement or current measurement performed.

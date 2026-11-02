@@ -1,0 +1,42 @@
+2026-11-01. Three Keil/Arm Compiler6.22 targets built:0errors,0warnings each.
+Checked HEX checksums, SRAM SP range/alignment, Thumb Flash reset vector,
+strong TIM2 IRQ28 vector matching linker map. Queue ownership/static main
+ordering/no runtime polling loop, one DR submission site, active snapshot,
+FIFO capacity/drop-new, TC-only completion counter checked. Slow target source
+differs only one pacing initializer; optional format target compiles body+call.
+Separate Python policy model:22 tests pass. FIFO wrap/full/equal-index count,
+snapshots/raw+alarm, active+pending capacity, continued sampling under slowTX,
+byte/TC distinction, deliberate-gap vs TXEdeadline, ADC/TXE/TC errors, late flags,
+skipped slots, uint32 wrap, frozen tick, exact frame covered. This does not run
+the ARM source or emulate peripherals. Normal modeled9samples/9confirmed/0drop;
+slow20 modeled9samples/2confirmed/5drop/1active/1pending after tick1000.
+Actual board/adapter receipt, timing, pin sharing, voltage and debugger effects
+are unverified. User performs later. Initial sandbox linker launch had a Windows
+DLL relocation conflict; identical project built successfully outside restricted
+process context, without changing the compiler/project or system settings.
+[
+  {
+    "target": "01_Buffer_Direct",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000480",
+    "reset": "0x800019b",
+    "TIM2_IRQ28": "0x8000211"
+  },
+  {
+    "target": "02_Slow_Consumer",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000480",
+    "reset": "0x800019b",
+    "TIM2_IRQ28": "0x8000211"
+  },
+  {
+    "target": "03_Format_Function",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000480",
+    "reset": "0x800019b",
+    "TIM2_IRQ28": "0x8000211"
+  }
+]

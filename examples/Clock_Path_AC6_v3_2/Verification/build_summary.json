@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Seoul",
+  "compiler": "Arm Compiler6.22",
+  "optimization": "-O0",
+  "device": "STM32F103VET6 LQFP100 / STM32F10X_HD",
+  "startup": "HSI nominal8MHz",
+  "targets": [
+    {
+      "target": "01_HSI_APB_Divide",
+      "source": "App/01_hsi_apb_divide.c",
+      "source_sha256": "1e0a2d99b7e3d1328f40d4e2aed7faf8c967de2197c97540d971b55de8bcf5ca",
+      "axf_sha256": "74df9e4a94e49bfcd4c95004eb4f12ff51add0789300abded22dd477277c3dc3",
+      "build": "0 errors,0 warnings",
+      "board": "not run"
+    },
+    {
+      "target": "02_HSE_Switch",
+      "source": "App/02_hse_switch.c",
+      "source_sha256": "245f171de00c21c008e0754f8e21ebf7856616cbcfbd1f3df72dc4b393b51d28",
+      "axf_sha256": "13902f344d62fb3186d754fbd7e08cc6e19e8493b4c00d84f254010d48bfb1c8",
+      "build": "0 errors,0 warnings",
+      "board": "not run"
+    },
+    {
+      "target": "03_PLL72_Switch",
+      "source": "App/03_pll72_switch.c",
+      "source_sha256": "919fb38219982b29cfdb227df1bda83b240537c7721cd6e3044ab2e4200a5737",
+      "axf_sha256": "f6a9f7491d424439a42eaa95ef9681465c18e4913dff2aa857539f981721dc26",
+      "build": "0 errors,0 warnings",
+      "board": "not run"
+    }
+  ],
+  "nominal_arithmetic": [
+    {
+      "example": "01 before",
+      "cfgr": "0x0",
+      "sysclk": 8000000,
+      "hclk": 8000000,
+      "pclk1": 8000000,
+      "pclk2": 8000000,
+      "tim_apb1": 8000000,
+      "adc_path": 4000000
+    },
+    {
+      "example": "01 after",
+      "cfgr": "0x400",
+      "sysclk": 8000000,
+      "hclk": 8000000,
+      "pclk1": 4000000,
+      "pclk2": 8000000,
+      "tim_apb1": 8000000,
+      "adc_path": 4000000
+    },
+    {
+      "example": "02 success",
+      "cfgr": "0x5",
+      "sysclk": 8000000,
+      "hclk": 8000000,
+      "pclk1": 8000000,
+      "pclk2": 8000000,
+      "tim_apb1": 8000000,
+      "adc_path": 4000000
+    },
+    {
+      "example": "03 success",
+      "cfgr": "0x1d840a",
+      "sysclk": 72000000,
+      "hclk": 72000000,
+      "pclk1": 36000000,
+      "pclk2": 72000000,
+      "tim_apb1": 72000000,
+      "adc_path": 12000000
+    }
+  ],
+  "pc_hardware_simulation": false,
+  "board_verified": false
+}

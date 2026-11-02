@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Seoul",
+  "compiler": "MSVC19.51.36260 x64",
+  "options": "/W4 /WX /Od /TC",
+  "exit_code": 0,
+  "source_sha256": "0e5a40eb80980b9302fd8003bb52e975fbe6dfa83d33f36f848d374b2292c090",
+  "output": [
+    "P01: bytes=18, wire_ms=18.750, link_percent=18.750",
+    "E05: bytes=21, wire_ms=21.875, link_percent=21.875",
+    "PROPOSED: bytes=40, wire_ms=41.667, link_percent=41.667",
+    "PROPOSED_MAX: bytes=52, wire_ms=54.167, link_percent=54.167",
+    "PROPOSED_MAX C string storage: 53 bytes including NUL"
+  ],
+  "scope": "ASCII size and nominal wire time arithmetic",
+  "new_mcu_firmware": false,
+  "pc_protocol_parser": false,
+  "new_arm_build": false,
+  "board_verified": false
+}

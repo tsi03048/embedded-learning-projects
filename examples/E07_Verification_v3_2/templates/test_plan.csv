@@ -1,0 +1,6 @@
+﻿Test ID,Req ID,초기 상태·순서,실행 전 예상,관찰 지점,실제 결과,판정,증거 파일
+T-PC-01,REQ-E07-01,새 Slot; begin(A); begin(B),A=1 B=0; origin=1/W busy=1,B rejected while busy; A metadata retained,,미실행,
+T-PC-02,REQ-E07-02,앞 순서 뒤 complete(-3); current=B,완료=1; result=1/W/-3; matches(B)=0,A completes; result belongs to A; A result not current B,,미실행,
+T-PC-03,REQ-E07-03,main 첫 idle 완료 및 A 완료 뒤 중복 완료,두 호출 모두 0,no completion while idle; duplicate completion rejected,,미실행,
+T-PC-04,REQ-E07-04,A 완료 뒤 begin(B); complete(3),B 수락=1; result=2/V/3,B accepted after completion; B result belongs to B,,미실행,
+T-FAULT-01,REQ-E07-02,sample_origin.c의 잘못된 도착 문맥 부착 분기,A 결과를 B의 현재 결과로 쓰면 요구 위반,wrong label matches current; wrong label hides origin,,미실행,

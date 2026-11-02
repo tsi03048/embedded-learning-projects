@@ -1,0 +1,39 @@
+Validated 2026-11-01 with Keil uVision / Arm Compiler 6.22.
+All three targets compiled, assembled, linked and generated HEX: 0 errors, 0 warnings.
+HEX checksums, initial SRAM SP alignment and Flash Thumb reset vector checked.
+Third target: TIM2 vector at Flash+0xB0 equals strong C TIM2_IRQHandler;
+BX LR return instruction is present in the handler machine code.
+PC arithmetic model: PSC+1 division, inclusive ARR, exact toy count trace,
+10/1/2 second nominal period calculations, sticky flag event coalescence,
+and the documented UG-then-clear setup policy. Scope checks: no GPIO/PWM,
+SysTick, debounce, delay; no NVIC/ISR in targets 1 and 2.
+This model does not emulate the STM32 timer or NVIC, peripheral timing,
+debugger behavior or physical HSI accuracy. No physical board was used.
+Not validated: probe/download, actual CNT/UIF behavior, interrupt entry/return
+at runtime, clock accuracy or measured time. User performs board checks later.
+[
+  {
+    "target": "01_Counter",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000408",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "02_Update_Poll",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000408",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "03_Update_IRQ",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000410",
+    "reset": "0x8000177",
+    "TIM2_vector_address": "0x080000b0",
+    "TIM2_handler": "0x80001ed",
+    "handler_return": "BX LR"
+  }
+]

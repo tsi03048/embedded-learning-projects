@@ -1,0 +1,29 @@
+test_adc_absent_at_boundary (__main__.WaitTests.test_adc_absent_at_boundary) ... ok
+test_adc_before_deadline (__main__.WaitTests.test_adc_before_deadline) ... ok
+test_adc_ready_at_boundary_wins (__main__.WaitTests.test_adc_ready_at_boundary_wins) ... ok
+test_all_submitted_not_confirmed (__main__.WaitTests.test_all_submitted_not_confirmed) ... ok
+test_calibration_observation_policy (__main__.WaitTests.test_calibration_observation_policy) ... ok
+test_frozen_tick_does_not_timeout (__main__.WaitTests.test_frozen_tick_does_not_timeout) ... ok
+test_inactivity_budget_is_not_total_report_budget (__main__.WaitTests.test_inactivity_budget_is_not_total_report_budget) ... ok
+test_late_eoc_after_error_does_not_read (__main__.WaitTests.test_late_eoc_after_error_does_not_read) ... ok
+test_late_first_ready_is_rejected (__main__.WaitTests.test_late_first_ready_is_rejected) ... ok
+test_old_result_not_new_acquisition (__main__.WaitTests.test_old_result_not_new_acquisition) ... ok
+test_partial_prefix_four_submissions (__main__.WaitTests.test_partial_prefix_four_submissions) ... ok
+test_tc_missing_at50 (__main__.WaitTests.test_tc_missing_at50) ... ok
+test_tc_ready_at50 (__main__.WaitTests.test_tc_ready_at50) ... ok
+test_timer_boot_poll_bound_not_time (__main__.WaitTests.test_timer_boot_poll_bound_not_time) ... ok
+test_txe_missing_at50 (__main__.WaitTests.test_txe_missing_at50) ... ok
+test_txe_ready_after50_rejected (__main__.WaitTests.test_txe_ready_after50_rejected) ... ok
+test_txe_ready_at50_accepts_one (__main__.WaitTests.test_txe_ready_at50_accepts_one) ... ok
+test_uart_error_keeps_accepted_measurement (__main__.WaitTests.test_uart_error_keeps_accepted_measurement) ... ok
+test_unsigned_wrap (__main__.WaitTests.test_unsigned_wrap) ... ok
+test_zero_is_valid_data (__main__.WaitTests.test_zero_is_valid_data) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.002s
+
+OK
+normal: error=0, raw=2600, valid=1, DR submitted=18, finalTC confirmations=1, prefix=b'raw=2600,state=W\r\n'
+adc_missing: error=3, raw=65535, valid=0, DR submitted=0, finalTC confirmations=0, prefix=b''
+txe_after4: error=4, raw=2600, valid=1, DR submitted=4, finalTC confirmations=0, prefix=b'raw='
+tc_missing: error=5, raw=2600, valid=1, DR submitted=18, finalTC confirmations=0, prefix=b'raw=2600,state=W\r\n'

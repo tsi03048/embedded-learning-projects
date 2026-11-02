@@ -1,0 +1,73 @@
+Validated 2026-11-01, Keil uVision / Arm Compiler6.22.
+Five targets compile/link/HEX: 0 errors,0 warnings each.
+HEX checksum, SRAM SP alignment/range, Flash Thumb reset vector checked.
+Every TIM2 IRQ28 Flash+B0 equals linked strong C handler with return opcode.
+Source checks: timer before calibration, boundedUG poll, RSTCAL/CAL10tick
+budgets, no runtime polling while-loops, ADC valid invalidation/publication,
+inclusive ready deadline/exclusive late observation, UART per-byte inactivity
+and finalTC split, no DR accesses inERROR. Fault targets differ only in named
+observation test variable and mask; one main source included per target.
+Separate Python model:20 tests executed and passed; input/trace/EXPECTED files.
+Checks cover deadline before/at/after, old/zero values, latched lateEOC, wrap,
+frozen tick,4submittedprefix,18submitted vs finalTC, UARTvalidity, per-progress
+budget and startup observation/bounded poll policy. Existing input.csv preserved.
+These models do NOT execute ARM C or emulate hardware/IRQ/electrical baud.
+Not validated: actual board ADC/IRQ/timing, UART TXE/TC signaling/PC receipt,
+observation fault targets on board, calibration/timer fault, recovery/restart.
+User will perform board checks. Fault masks are software branch exercises,
+NOT proof of physical peripheral fault detection. ERROR does not cancel already
+submitted HW work. No auto-retry; explicit full MCU reset is lesson recovery.
+Limits depend on progressing serviced timer ticks and main revisits, not hard
+wall-clock/clock-failure protection. TimerUG100000polls is not milliseconds.
+[
+  {
+    "target": "01_ADC_Bounded",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000430",
+    "reset": "0x8000177",
+    "TIM2_vector": "0x80001ed",
+    "handler_size": 42,
+    "return": "BX LR or POP PC"
+  },
+  {
+    "target": "02_UART_Bounded",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000438",
+    "reset": "0x800019b",
+    "TIM2_vector": "0x8000211",
+    "handler_size": 42,
+    "return": "BX LR or POP PC"
+  },
+  {
+    "target": "03_ADC_Observation_Fault",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000430",
+    "reset": "0x8000177",
+    "TIM2_vector": "0x80001ed",
+    "handler_size": 42,
+    "return": "BX LR or POP PC"
+  },
+  {
+    "target": "04_TXE_Observation_Fault",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000438",
+    "reset": "0x800019b",
+    "TIM2_vector": "0x8000211",
+    "handler_size": 42,
+    "return": "BX LR or POP PC"
+  },
+  {
+    "target": "05_TC_Observation_Fault",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000438",
+    "reset": "0x800019b",
+    "TIM2_vector": "0x8000211",
+    "handler_size": 42,
+    "return": "BX LR or POP PC"
+  }
+]

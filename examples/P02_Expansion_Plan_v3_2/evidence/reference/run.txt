@@ -1,0 +1,5 @@
+P01: bytes=18, wire_ms=18.750, link_percent=18.750
+E05: bytes=21, wire_ms=21.875, link_percent=21.875
+PROPOSED: bytes=40, wire_ms=41.667, link_percent=41.667
+PROPOSED_MAX: bytes=52, wire_ms=54.167, link_percent=54.167
+PROPOSED_MAX C string storage: 53 bytes including NUL

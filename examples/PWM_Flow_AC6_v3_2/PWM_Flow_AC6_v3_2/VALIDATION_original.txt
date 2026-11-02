@@ -1,0 +1,52 @@
+Validated 2026-11-01, Keil uVision / Arm Compiler 6.22.
+Five targets: C compile, integrated assembly, link, HEX: 0 errors, 0 warnings.
+HEX checksums, SRAM SP alignment/range and Flash Thumb reset vector checked.
+Fifth target: Flash+0xB0 equals strong C TIM2_IRQHandler, contains BX LR.
+PC logic model: strict CNT<CCR, inclusive ARR, duty 0/25/50/75/99.9/100%,
+nominal periods 1s/1ms, 16-bit boundary, preload vs active transfer and latest
+write coalescence, request clamp, interior compare event and sticky status.
+Scope: no pin output in target1, no IRQ in targets1-4, no DMA/capture/SysTick.
+This is NOT an STM32 peripheral emulator or physical waveform test.
+Not validated: actual CNT/OC3REF, PA2 wiring/output voltage/pulse timing,
+LED current/brightness, debug writes, runtime IRQ entry/return, HSI accuracy.
+User will perform physical-board checks later; all times are nominal.
+[
+  {
+    "target": "01_Count_Compare",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000408",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "02_Slow_Output",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000408",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "03_Fast_Duty",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000408",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "04_Preload",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000410",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "05_Compare_IRQ",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000410",
+    "reset": "0x8000177",
+    "TIM2_vector": "0x080000b0",
+    "handler": "0x80001ed",
+    "return_instruction": "BX LR"
+  }
+]

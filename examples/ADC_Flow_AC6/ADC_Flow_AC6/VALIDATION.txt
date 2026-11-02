@@ -1,0 +1,42 @@
+Validated 2026-11-01, Keil uVision / Arm Compiler 6.22.
+All three targets compile/link/HEX with 0 errors and 0 warnings.
+HEX checksums, aligned SRAM SP, Thumb Flash reset vectors checked.
+IRQ target Flash+0x88 equals strong ADC1_2_IRQHandler; BX LR lies within
+the handler symbol's code range. IRQ18 and NVIC[0] bit18 arithmetic checked.
+PC logical models: CRL field preservation, SMP4 encoding, SQ1=4/L=0,
+ADCPRE /2 nominal4MHz, 252-cycle nominal63us, startup wait margin,
+12-bit voltage estimate incl upper code/integer truncation and 32-bit product,
+single EOC/read/clear state, explicit new request with CONT=0.
+Source sequence inspected: ADON on -> inline startup wait -> RSTCAL -> CAL
+-> discard calibration DR -> clear flags -> ready -> request/read.
+No timers/SysTick, DMA, UART, LED or user init/task helper functions.
+PC models do NOT emulate ADC analog settling, conversion timing or NVIC.
+Not validated: actual VREF+/VDDA/GND/pin wiring, code error/noise, capacitor
+settling or physical ISR entry/return. User performs real-board tests later.
+[
+  {
+    "target": "01_Single_Poll",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000410",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "02_Repeat_Poll",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000418",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "03_Single_IRQ",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000418",
+    "reset": "0x80001b3",
+    "ADC1_2_vector": "0x08000088",
+    "handler": "0x8000175",
+    "handler_size": 60,
+    "return_instruction": "BX LR"
+  }
+]

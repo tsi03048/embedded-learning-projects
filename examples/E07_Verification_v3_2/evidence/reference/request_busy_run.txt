@@ -1,0 +1,11 @@
+no completion while idle: PASS
+A accepted: PASS
+B rejected while busy: PASS
+A metadata retained: PASS
+A completes: PASS
+result belongs to A: PASS
+A result not current B: PASS
+duplicate completion rejected: PASS
+B accepted after completion: PASS
+B result belongs to B: PASS
+10/10 checks passed

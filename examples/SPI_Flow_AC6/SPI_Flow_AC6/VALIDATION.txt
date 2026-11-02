@@ -1,0 +1,44 @@
+Validated 2026-11-01, Keil uVision / Arm Compiler6.22.
+Three targets compile/link/HEX with 0 errors,0 warnings.
+HEX checksums, aligned SRAM SP, Thumb reset vector checked.
+IRQ target Flash+0xCC equals strong C SPI1_IRQHandler; BX LR lies within
+that symbol. IRQ35 -> NVIC register1 bit3 arithmetic checked.
+PC models: PCLK2/256 clock/frame duration; CR1 independent fields; CRL field
+preservation; four-pattern bit serialization/reconstruction; all four mode
+capture-edge mappings; same-endpoint LSB loopback also matches data;
+separate Tx/Rx buffers; TXE1 while BSY1; RXNE read-clear; old Rx retention
+on overrun and documented DR-then-SR clear order.
+Source scope: setup in main before SPE; no timer/SysTick/DMA/UART/user init
+helpers; IRQ only target3; main does not read DR in IRQ target.
+These tests do NOT emulate peripheral/NVIC execution or electrical timing.
+Not verified: actual board jumpers/pin sharing, SCK/data waveform, 31.25kHz
+accuracy, loopback result, IRQ entry/return, external slave commands or CS.
+AT45DB041E is only a cited document-reading case; actual module unconfirmed.
+User performs real-board verification later.
+[
+  {
+    "target": "01_Loop_One",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000418",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "02_Loop_Patterns",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000420",
+    "reset": "0x8000177"
+  },
+  {
+    "target": "03_RX_IRQ",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000420",
+    "reset": "0x8000177",
+    "SPI1_vector": "0x080000cc",
+    "handler": "0x8000181",
+    "handler_size": 56,
+    "return_instruction": "BX LR"
+  }
+]

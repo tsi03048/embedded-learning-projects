@@ -1,0 +1,16 @@
+Validated on 2026-11-01 with Keil uVision + Arm Compiler 6.22.
+All three targets compiled, linked and generated HEX with no errors/warnings.
+Generated HEX checks: record checksum, SRAM stack bounds/8-byte alignment,
+Flash reset-vector bounds/Thumb bit. App sources contain no SysTick/TIM
+configuration, interrupt enable or software-delay call.
+
+01_LED_On: 0 errors, 0 warnings; HEX vector SP=0x20000400, Reset=0x08000177
+02_Button_Read: 0 errors, 0 warnings; HEX vector SP=0x20000408, Reset=0x08000177
+03_Button_LED: 0 errors, 0 warnings; HEX vector SP=0x20000408, Reset=0x08000177
+
+Not validated: board connector mapping/jumpers, LED polarity/voltage/current,
+button waveform, download/debug probe setup and actual board operation.
+The user will verify these on the actual board later.
+The startup file is in GNU syntax for the AC6 integrated assembler.
+Its File Options explicitly select assembler-with-cpp. Keep project settings.
+The original ST startup source is preserved for provenance, not built.

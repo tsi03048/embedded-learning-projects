@@ -1,0 +1,32 @@
+Validated with Keil uVision + Arm Compiler 6.22, 2026-11-01.
+Both targets: C compile, integrated assembly, link and HEX: 0 errors, 0 warnings.
+PC checks: HEX checksums, aligned valid SRAM SP, Flash Thumb reset vector,
+EXTI0 vector at +0x58 equals actual strong C handler symbol, handler BX LR.
+Logical model: route field preserves other lines; falling/rising distinguish
+press/release; stable level gives no new edge; PR direct W1C preserves other
+pending bits; multiple requests can coalesce in one pending bit.
+PC models do not emulate real EXTI/NVIC timing, electrical signals or the board.
+Not validated: physical PC0 mapping, probe/download, voltage, actual handler
+entry, contact waveform and runtime return. User will verify on the board.
+[
+  {
+    "target": "01_Falling",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000408",
+    "EXTI0_vector_address": "0x08000058",
+    "EXTI0_vector_value": "0x8000179",
+    "handler_symbol": "0x8000179",
+    "exception_return_instruction": "BX LR"
+  },
+  {
+    "target": "02_Rising",
+    "errors": 0,
+    "warnings": 0,
+    "SP": "0x20000408",
+    "EXTI0_vector_address": "0x08000058",
+    "EXTI0_vector_value": "0x8000179",
+    "handler_symbol": "0x8000179",
+    "exception_return_instruction": "BX LR"
+  }
+]

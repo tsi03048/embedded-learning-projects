@@ -1,0 +1,32 @@
+test_cal_failure_does_not_advance_epoch (__main__.Tests.test_cal_failure_does_not_advance_epoch) ... ok
+test_chunk_boundaries (__main__.Tests.test_chunk_boundaries) ... ok
+test_current_line_uses_snapshot_generation (__main__.Tests.test_current_line_uses_snapshot_generation) ... ok
+test_drain_failure_no_marker_or_reset (__main__.Tests.test_drain_failure_no_marker_or_reset) ... ok
+test_drain_writes_no_more_old_bytes (__main__.Tests.test_drain_writes_no_more_old_bytes) ... ok
+test_frozen_tick_does_not_expire (__main__.Tests.test_frozen_tick_does_not_expire) ... ok
+test_full_drop_is_distinct_from_recovery_discard (__main__.Tests.test_full_drop_is_distinct_from_recovery_discard) ... ok
+test_full_wire_and_refusal_scenarios (__main__.Tests.test_full_wire_and_refusal_scenarios) ... ok
+test_late_eoc_no_new_queue_entry (__main__.Tests.test_late_eoc_no_new_queue_entry) ... ok
+test_marker_then_stop_reset_calibration (__main__.Tests.test_marker_then_stop_reset_calibration) ... ok
+test_new_conversion_required (__main__.Tests.test_new_conversion_required) ... ok
+test_no_request_preserves_frozen_pending (__main__.Tests.test_no_request_preserves_frozen_pending) ... ok
+test_old_complete_record_cannot_be_retracted (__main__.Tests.test_old_complete_record_cannot_be_retracted) ... ok
+test_old_eoc_during_cleanup_not_published (__main__.Tests.test_old_eoc_during_cleanup_not_published) ... ok
+test_old_error_preserved (__main__.Tests.test_old_error_preserved) ... ok
+test_partial_closed_before_new_record (__main__.Tests.test_partial_closed_before_new_record) ... ok
+test_pending_and_active_separate_counts (__main__.Tests.test_pending_and_active_separate_counts) ... ok
+test_ready_not_fresh (__main__.Tests.test_ready_not_fresh) ... ok
+test_rstcal_failure (__main__.Tests.test_rstcal_failure) ... ok
+test_running_request_consumed_and_denied (__main__.Tests.test_running_request_consumed_and_denied) ... ok
+test_second_retry_denied_after_success (__main__.Tests.test_second_retry_denied_after_success) ... ok
+test_stale_slot_rejected_not_relabelled (__main__.Tests.test_stale_slot_rejected_not_relabelled) ... ok
+test_sync_final_tc_required (__main__.Tests.test_sync_final_tc_required) ... ok
+test_sync_txe_failure (__main__.Tests.test_sync_txe_failure) ... ok
+test_tick_wrap_and_ready_boundary (__main__.Tests.test_tick_wrap_and_ready_boundary) ... ok
+test_unsupported_boot_failure (__main__.Tests.test_unsupported_boot_failure) ... ok
+test_whole_line_sent_not_pc_ack (__main__.Tests.test_whole_line_sent_not_pc_ack) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.002s
+
+OK

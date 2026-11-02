@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Seoul",
+  "compiler": "MSVC 19.51.36260 x64",
+  "options": "/W4 /WX /Od /TC",
+  "programs": [
+    {
+      "program": "request_busy",
+      "checks": 10,
+      "exit_code": 0,
+      "run_log": "evidence/reference/request_busy_run.txt"
+    },
+    {
+      "program": "sample_origin",
+      "checks": 8,
+      "exit_code": 0,
+      "run_log": "evidence/reference/sample_origin_run.txt"
+    }
+  ],
+  "total_checks": 18,
+  "source_changed": false,
+  "new_arm_build": false,
+  "board_run": false
+}
